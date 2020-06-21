@@ -15,19 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with CivMaster.  If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.angrysoundtech
+package io.github.angrysoundtech.gui.screen
 
-import net.minecraftforge.fml.common.Mod
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-const val MOD_ID = "civmaster"
-
-@Mod(MOD_ID)
-object CivMaster {
-
-    val logger: Logger = LogManager.getLogger(MOD_ID)
-
-    init {
-
-    }
-}
+const val BUTTON_WIDTH = 200
+const val BUTTON_HEIGHT = 30
+const val SEPARATION = 5

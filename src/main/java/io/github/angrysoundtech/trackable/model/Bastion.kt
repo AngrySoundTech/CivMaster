@@ -15,19 +15,21 @@
  * You should have received a copy of the GNU General Public License
  * along with CivMaster.  If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.angrysoundtech
+package io.github.angrysoundtech.trackable.model
 
-import net.minecraftforge.fml.common.Mod
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-const val MOD_ID = "civmaster"
+import net.minecraft.block.Block
+import net.minecraft.block.Blocks
 
-@Mod(MOD_ID)
-object CivMaster {
+sealed class Bastion : Trackable
 
-    val logger: Logger = LogManager.getLogger(MOD_ID)
+class VaultBastion : Bastion() {
 
-    init {
+    override val radius = 20
+    override val block: Block = Blocks.SPONGE
+}
 
-    }
+class CityBastion : Bastion() {
+
+    override val radius = 50
+    override val block: Block = Blocks.BONE_BLOCK
 }

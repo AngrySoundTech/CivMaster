@@ -15,19 +15,24 @@
  * You should have received a copy of the GNU General Public License
  * along with CivMaster.  If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.angrysoundtech
+package io.github.angrysoundtech.handler
 
+import io.github.angrysoundtech.MOD_ID
+import net.minecraftforge.api.distmarker.Dist
+import net.minecraftforge.client.event.ClientChatReceivedEvent
+import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-const val MOD_ID = "civmaster"
 
-@Mod(MOD_ID)
-object CivMaster {
+@Mod.EventBusSubscriber(Dist.CLIENT, modid = MOD_ID)
+object ChatHandler {
 
-    val logger: Logger = LogManager.getLogger(MOD_ID)
+    @SubscribeEvent
+    fun onChatMessage(event: ClientChatReceivedEvent) {
+        println(event.message.unformattedComponentText)
 
-    init {
-
+        if (true) { // TODO
+            // Create snitch
+        }
     }
+
 }

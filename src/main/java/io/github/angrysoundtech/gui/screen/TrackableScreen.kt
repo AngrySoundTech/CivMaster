@@ -15,19 +15,28 @@
  * You should have received a copy of the GNU General Public License
  * along with CivMaster.  If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.angrysoundtech
+package io.github.angrysoundtech.gui.screen
 
-import net.minecraftforge.fml.common.Mod
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-const val MOD_ID = "civmaster"
+import io.github.angrysoundtech.trackable.model.Trackable
+import net.minecraft.client.gui.screen.Screen
+import net.minecraft.client.gui.widget.button.Button
+import net.minecraft.util.text.StringTextComponent
+import net.minecraftforge.fml.client.config.GuiButtonExt
 
-@Mod(MOD_ID)
-object CivMaster {
+class TrackableScreen<out T : Trackable> : Screen(StringTextComponent("Trackable")) {
 
-    val logger: Logger = LogManager.getLogger(MOD_ID)
+    override fun init() {
+        this.buttons.clear()
 
-    init {
+        val xPos = width / 2 - BUTTON_WIDTH / 2
+        var yPos = height / 4 + 8 - (BUTTON_HEIGHT + SEPARATION)
 
+        addButton(GuiButtonExt(
+            xPos, yPos, BUTTON_WIDTH, BUTTON_HEIGHT,
+            "Refresh All", Button.IPressable {
+
+            }
+        ))
     }
+
 }

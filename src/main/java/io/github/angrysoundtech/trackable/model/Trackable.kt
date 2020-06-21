@@ -15,19 +15,14 @@
  * You should have received a copy of the GNU General Public License
  * along with CivMaster.  If not, see <https://www.gnu.org/licenses/>.
  */
-package io.github.angrysoundtech
+package io.github.angrysoundtech.trackable.model
 
-import net.minecraftforge.fml.common.Mod
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
-const val MOD_ID = "civmaster"
+import net.minecraft.block.Block
+import net.minecraft.util.math.BlockPos
 
-@Mod(MOD_ID)
-object CivMaster {
+interface Trackable {
 
-    val logger: Logger = LogManager.getLogger(MOD_ID)
+    val radius: Int
 
-    init {
-
-    }
+    val block: Block
 }

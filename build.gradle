@@ -29,6 +29,7 @@ apply plugin: 'net.minecraftforge.gradle'
 
 repositories {
     mavenCentral()
+    jcenter()
     maven {
         url 'https://files.minecraftforge.net/maven'
     }
