@@ -57,7 +57,7 @@ minecraft {
             properties 'fml.earlyprogresswindow': 'false'
             workingDirectory project.file('run')
             mods {
-                kotlinforgetemplate {
+                civmaster {
                     source sourceSets.main
                 }
             }
@@ -66,7 +66,7 @@ minecraft {
             properties 'forge.logging.console.level': 'debug'
             workingDirectory project.file('run')
             mods {
-                kotlingforgetemplate {
+                civmaster {
                     source sourceSets.main
                 }
             }
@@ -97,6 +97,8 @@ processResources {
         expand 'version':project.version
 
     }
+
+    from 'LICENSE'
 }
 
 shadowJar {
@@ -140,4 +142,6 @@ artifacts {
 
 license {
     include "**/*.kt"
+
+    header new File('LICENSE_HEADER')
 }

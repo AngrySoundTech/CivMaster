@@ -1,18 +1,18 @@
 modLoader="kotlinfml"
 loaderVersion="[1.4,)"
 
-issueTrackerURL="https://github.com/AngrySoundTech/ForgeKotlinTemplate/issues"
-displayURL="https://github.com/AngrySoundTech/ForgeKotlinTemplate"
+issueTrackerURL="https://github.com/AngrySoundTech/CivMaster/issues"
+displayURL="https://github.com/AngrySoundTech/CivMaster"
 authors="AngrySoundTech"
-credits=""
+credits="Mr_Little_Kitty, iykHvflvfR, Gjum"
 
 [[mods]]
-modId="forgekotlintemplate"
+modId="civmaster"
 version="${version}"
-displayName="ForgeKotlinTemplate"
+displayName="CivMaster"
 description=""
 
-[[dependencies.forgekotlintemplate]]
+[[dependencies.civmaster]]
 modId="forge"
 mandatory=true
 versionRange="[28.1.92,)"
